@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    background:linear-gradient(135deg,#7f7fd5,#86a8e7,#91eae4);
+    min-height:100vh;
+    color:#333;
+}
+
+.page-wrap{
+    width:90%;
+    max-width:850px;
+    margin:40px auto;
+}
+
+header{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+}
+
+.intro,
+.quiz,
+.result{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    animation:fade .4s;
+}
+
+.hidden{
+    display:none;
+}
+
+label{
+    display:block;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:2px solid #ddd;
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#7f7fd5;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    border-radius:14px;
+    padding:16px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.25s;
+}
+
+button:hover:not(:disabled){
+    transform:translateY(-2px);
+}
+
+button:disabled{
+    opacity:.5;
+    cursor:default;
+}
+
+/* Кнопки выбора */
+
+.menu-button{
+    width:100%;
+    color:white;
+    margin-bottom:18px;
+}
+
+#zhanna-button{
+    background:#d63384;
+}
+
+#zhanna-button:hover{
+    background:#bb2d72;
+}
+
+#pavel-button{
+    background:#0d6efd;
+}
+
+#pavel-button:hover{
+    background:#0b5ed7;
+}
+
+/* Кнопки управления */
+
+#next-button,
+#restart-button{
+    width:100%;
+    background:#6c63ff;
+    color:white;
+}
+
+#next-button:hover,
+#restart-button:hover{
+    background:#5647ff;
+}
+
+.quiz-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.question-card{
+    border:2px solid #eee;
+    border-radius:16px;
+    padding:25px;
+}
+
+.question-number{
+    color:#6c63ff;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.question-text{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.answers{
+    display:grid;
+    gap:15px;
+}
+
+.answer-button{
+    background:#f3f4ff;
+    border:2px solid transparent;
+    border-radius:14px;
+    padding:18px;
+    font-size:18px;
+    transition:.2s;
+}
+
+.answer-button:hover:not(:disabled){
+    border-color:#6c63ff;
+    background:#e8e9ff;
+}
+
+.answer-button.correct{
+    background:#b8f7c6;
+    border-color:#1db954;
+}
+
+.answer-button.wrong{
+    background:#ffc3c3;
+    border-color:#ff4d4d;
+}
+
+.controls{
+    margin-top:25px;
+}
+
+.result{
+    text-align:center;
+}
+
+.result h2{
+    margin-bottom:20px;
+    font-size:34px;
+}
+
+.result p{
+    margin:18px 0;
+    font-size:22px;
+}
+
+.leaderboard{
+    margin-top:35px;
+    text-align:left;
+}
+
+.leaderboard h3{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.leaderboard ol{
+    padding-left:25px;
+}
+
+.leaderboard li{
+    background:#f4f4ff;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:10px;
+    font-size:18px;
+}
+
+.leaderboard li:nth-child(1){
+    background:#ffe066;
+}
+
+.leaderboard li:nth-child(2){
+    background:#dfe6e9;
+}
+
+.leaderboard li:nth-child(3){
+    background:#f6b26b;
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .page-wrap{
+        width:95%;
+    }
+
+    header h1{
+        font-size:30px;
+    }
+
+    .quiz-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .question-text{
+        font-size:22px;
+    }
+
+}

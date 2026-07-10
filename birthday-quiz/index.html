@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Викторина ко Дню рождения 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="page-wrap">
+
+
+<header>
+
+    <h1>🎂 Викторина ко Дню рождения</h1>
+
+    <p>
+        Проверьте, насколько хорошо вы знаете наших именинников!
+    </p>
+
+</header>
+
+
+
+
+
+<!-- Главное меню -->
+
+<section class="intro" id="intro-screen">
+
+
+    <label for="player-name">
+        Введите ваше имя
+    </label>
+
+
+    <input
+        type="text"
+        id="player-name"
+        placeholder="Например: Семья Ивановых"
+        autocomplete="off"
+    >
+
+
+
+    <h2 style="text-align:center;margin:25px 0;">
+        Выберите викторину
+    </h2>
+
+
+
+
+    <button
+        id="zhanna-button"
+        class="menu-button">
+
+        👩 Пройти тест про Жанну
+
+    </button>
+
+
+
+
+
+    <button
+        id="pavel-button"
+        class="menu-button">
+
+        👨 Пройти тест про Павла
+
+    </button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Экран вопросов -->
+
+<section
+    class="quiz hidden"
+    id="quiz-screen">
+
+
+
+
+
+    <div class="quiz-header">
+
+
+
+        <div>
+
+            <span>Игрок</span><br>
+
+            <strong id="player-display"></strong>
+
+        </div>
+
+
+
+
+        <div>
+
+            <span>Тест</span><br>
+
+            <strong id="quiz-title"></strong>
+
+        </div>
+
+
+
+
+
+        <div>
+
+            <span>Очки</span><br>
+
+            <strong id="score-display">
+                0
+            </strong>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="question-card">
+
+
+
+        <div
+            class="question-number"
+            id="question-number">
+        </div>
+
+
+
+
+        <div
+            class="question-text"
+            id="question-text">
+        </div>
+
+
+
+
+
+        <div
+            class="answers"
+            id="answers">
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="controls">
+
+
+        <button
+            id="next-button"
+            disabled>
+
+            Следующий вопрос →
+
+        </button>
+
+
+
+    </div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Финальный экран -->
+
+
+<section
+    class="result hidden"
+    id="result-screen">
+
+
+
+
+
+    <h2>
+        🏆 Викторина окончена!
+    </h2>
+
+
+
+
+
+    <p id="result-message"></p>
+
+
+
+
+
+    <p>
+
+        Ваш результат:
+
+        <strong id="final-score"></strong>
+
+    </p>
+
+
+
+
+
+    <button
+        id="restart-button">
+
+        Вернуться в меню
+
+    </button>
+
+
+
+
+
+
+
+
+
+    <!-- ДВА РЕЙТИНГА -->
+
+    <div class="leaderboard">
+
+
+
+        <div class="leaderboard-block">
+
+
+            <h3>
+                👩 Лучшие результаты — Жанна
+            </h3>
+
+
+            <ol id="zhanna-leaderboard"></ol>
+
+
+        </div>
+
+
+
+
+
+        <div class="leaderboard-block">
+
+
+            <h3>
+                👨 Лучшие результаты — Павел
+            </h3>
+
+
+            <ol id="pavel-leaderboard"></ol>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="questions.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
